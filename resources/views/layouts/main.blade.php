@@ -11,8 +11,8 @@
                         <div class="card-header">
                             {{ $fumetto['title'] }}
                         </div>
+                        <img src="{{$fumetto['thumb']}}" alt="">
                         <div class="card-body">
-                            <img src="{{$fumetto['thumb']}}" alt="">
                             {{ $fumetto['description'] }}
                         </div>
                     </div>

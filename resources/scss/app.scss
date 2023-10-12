@@ -3,5 +3,20 @@
 body {
     img {
         width: 100%;
+        height: 400px;
+    }
+
+    .card {
+        height: 100%;
+
+        .card-header {
+            height: 70px;
+        }
+    }
+
+    .card-body {
+        height: 300px; /* Imposta l'altezza fissa per il card-body */
+        overflow: auto; /* Abilita lo scrolling nel caso in cui il testo superi l'altezza specificata */
+        padding: 10px;
     }
 }
