@@ -15,8 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $titleHead = 'DC comics Laravel';
+    $title = 'Lista film Comics';
 
-    return view('layouts.main', compact('titleHead'));
+    return view('layouts.main', compact('titleHead', 'title'));
 })->name('homepage');
 
 
