@@ -16,12 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     // CHIAVI
     $titleHead = 'DC comics Laravel';
-    $title = 'Lista film Comics';
-    $fumetti = config('fumetti.lista');
+    $title = 'PAGINA PRINCIPALE';
 
     // Cosa vedere e
     // Lettura chiavi
-    return view('layouts.main', compact('titleHead', 'title', 'fumetti'));
+    return view('layouts.main', compact('titleHead', 'title'));
 })->name('homepage');
 
 
@@ -41,6 +40,19 @@ Route::get('/about', function () {
 
     return view('layouts.main-about', compact('titleHead', 'arrayTipo'));
 })->name('about');
+
+
+
+
+Route::get('/lista-comics', function () {
+    $titleHead = 'DC comics Laravel';
+    $title = 'Lista film Comics';
+    $fumetti = config('fumetti.lista');
+
+
+    return view('layouts.lista', compact('titleHead', 'title', 'fumetti'));
+})->name('lista');
+
 
 
 
