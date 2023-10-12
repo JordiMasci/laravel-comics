@@ -14,11 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    // CHIAVI
     $titleHead = 'DC comics Laravel';
     $title = 'Lista film Comics';
+    $fumetti = config('fumetti.lista');
 
-    return view('layouts.main', compact('titleHead', 'title'));
+    // Cosa vedere e
+    // Lettura chiavi
+    return view('layouts.main', compact('titleHead', 'title', 'fumetti'));
 })->name('homepage');
+
+
+
+
 
 
 
